@@ -13,14 +13,15 @@ return new class  extends Migration
      */
     public function up()
     {
-        Schema::create('colaborador', function (Blueprint $table) {
-            $table->id();
-
-            $table->string('Nombres');
-            $table->string('Apellidos');
-            $table->string('Correo');
-            $table->string('Foto');
-            $table->timestamps();
+        Schema::table('colaborador', function (Blueprint $table) {
+           // $table->id();
+            
+           // $table->string('Nombres');
+           // $table->string('Apellidos');
+            $table->string('Cedula');
+           // $table->string('Correo');
+          //  $table->string('Foto');
+           // $table->timestamps();
         });
     }
 

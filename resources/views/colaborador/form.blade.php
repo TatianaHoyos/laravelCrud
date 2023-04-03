@@ -25,7 +25,7 @@
 
                         <div class="col-md-6">
                             <input id="Nombres" type="text" class="form-control" name="Nombres"
-                                value="{{isset($colaborador->Nombres)?$colaborador->Nombres:old('Nombres')}}" autofocus>
+                                value="{{isset($colaborador->Nombres)?$colaborador->Nombres:old('Nombres')}}" autofocus onkeypress="return sololetras(event)">
                         </div>
                     </div>
 
@@ -34,7 +34,7 @@
 
                         <div class="col-md-6">
                             <input id="Apellidos" type="text" class="form-control" name="Apellidos"
-                                value="{{isset($colaborador->Apellidos)?$colaborador->Apellidos:old('Apellidos')}}" autofocus>
+                                value="{{isset($colaborador->Apellidos)?$colaborador->Apellidos:old('Apellidos')}}" autofocus onkeypress="return sololetras(event)">
                         </div>
                     </div>
 
@@ -42,10 +42,21 @@
                         <label for="Correo" class="col-md-4 col-form-label text-md-end">Correo</label>
 
                         <div class="col-md-6">
-                            <input id="Correo" type="email" class="form-control" name="Correo"
-                                value="{{isset($colaborador->Correo)?$colaborador->Correo:old('Correo')}}" autofocus>
+                            <input id="email" type="email" class="form-control" name="Correo"
+                                value="{{isset($colaborador->Correo)?$colaborador->Correo:old('Correo')}}" autofocus onkeypress="return validarEmail(event)">
+                                <small id="emailMensaje" class="form-text"></small>
                         </div>
                     </div>
+
+                    <div class="row mb-3">
+                        <label for="Cedula" class="col-md-4 col-form-label text-md-end">Cedula</label>
+
+                        <div class="col-md-6">
+                            <input id="Cedula" type="text" class="form-control" name="Cedula"
+                                value="{{isset($colaborador->Cedula)?$colaborador->Cedula:old('Cedula')}}" autofocus onkeypress="return validarNumero(event)">
+                        </div>
+                    </div>
+                    
 
                     <div class="row mb-3">
                         <label for="Foto" class="col-md-4 col-form-label text-md-end">Foto</label>
@@ -71,6 +82,8 @@
 
                 </div>
             </div>
+
         </div>
+       
     </div>
 </div>

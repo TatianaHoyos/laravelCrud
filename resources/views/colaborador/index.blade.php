@@ -25,6 +25,7 @@
                 <th>Foto</th>
                 <th>Nombres</th>
                 <th>Apellidos</th>
+                <th>Cedula</th>
                 <th>Correo</th>
                 <th>Acciones</th>
             </tr>
@@ -42,6 +43,7 @@
                 </td>
                 <td>{{ $colaborador->Nombres }}</td>
                 <td>{{ $colaborador->Apellidos }}</td>
+                <td>{{ $colaborador->Cedula }}</td>
                 <td>{{ $colaborador->Correo }}</td>
 
                 <td>
